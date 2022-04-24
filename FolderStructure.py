@@ -15,17 +15,16 @@ class FolderStructure() :
 
     def __int__(self) :
         super().__init__()
-#################################################################################
-#  Steps followed to add the folder                                             #          
-#     1. currentDic point to the root Folder                                    #
-#     2. Divide the path into array for "/home/Datasets" as ['home','datasets']
-#     3. Traverse into folder by checking whether the subfolder conatins that dic
-#     4. If no folder/File is found in the subFolder 
-#            - check whether its a new folder to be created or it folder need to exists
-
-
-
-#######################################################################
+#########################################################################################
+#  Steps followed to add the folder                                                     #          
+#     1. currentDic point to the root Folder                                            #
+#     2. Divide the path into array for "/home/Datasets" as ['home','datasets']         #
+#     3. Traverse into folder by checking whether the subfolder conatins that dic       #
+#     4. If no folder/File is found in the subFolder                                    #
+#            - check whether its a new folder/file to be created                        #
+#        else                                                                           #
+#           -found append  file/folder in the subFolder                                 #
+#########################################################################################
 
 
 
@@ -58,7 +57,11 @@ class FolderStructure() :
                     newFolder = self.getFolderInfo(dicpath)
                     currentDic.append(newFolder)
                     currentDic = currentDic[-1].subFolder
-            
+
+##############################
+# Create New File or Folder  #
+##############################
+
     def getFileInfo(self,item):
         
         file = NewFile()
@@ -86,6 +89,21 @@ class FolderStructure() :
         folder.subFolder = []
         folder.upload_time = datetime.now().strftime("%H:%M:%S %B %d, %Y")
         return folder
+
+
+
+
+#########################################################################################
+#  Steps followed to View the folder                                                    #          
+#     1. currentDic point to the root Folder                                            #
+#     2. Divide the path into array for "/home/Datasets" as ['home','datasets']         #
+#     3. Traverse into folder by checking whether the subfolder contains that folder    #
+#     4. If no folder/File is found in the subFolder                                    #
+#            - print "No folder/file was found"                                         #
+#        else                                                                           #
+#           - if found the it show all the items in the folder and and subFolder        #
+#########################################################################################
+
 
     def view_item(self,folderPath):
         path = folderPath.split("/")[1:]
@@ -127,6 +145,9 @@ class FolderStructure() :
             else :
                 print("\t \t|-- " + item.name  +"\t ("+ item.size + ", " + item.type +")")
                 
+###################################################################################
+# View ALL Item will show all the folders and files present in the root folder    #
+###################################################################################
     def view_All_Item(self) :
         
         print("\n\t Folder Name \t \t  | \t \t Upload Time")
@@ -135,6 +156,19 @@ class FolderStructure() :
         for item in current.subFolder:
             if item is not None :
                 print("\t"+ item.name +"\t \t \t \t \t " +item.upload_time + "\n")
+
+
+#########################################################################################
+#  Steps followed to filter the file based on type                                      #          
+#     1. currentDic point to the root Folder                                            #
+#     2. Divide the path into array for "/home/Datasets" as ['home','datasets']         #
+#     3. Traverse into folder by checking whether the subfolder conatins that dic       #
+#     4. If no folder/File is found in the subFolder                                    #
+#            - check whether its a new folder to be created or it folder need to exists #
+#      else                                                                             #
+#           - if found the it will filter based on the type of the file                 #
+#########################################################################################
+
 
     def filter_item(self,filterCommand):
         filterType = filterCommand.split(" -type ")[1]
@@ -174,6 +208,19 @@ class FolderStructure() :
         for item in currentDic:
             if isinstance(item,NewFile) and item.type == filterType :
                 print("\t \t|-- " + item.name  +"\t ("+ item.size + ", " + item.type +")")
+
+
+#########################################################################################
+#  Steps followed to delete the folder/file                                             #          
+#     1. currentDic point to the root Folder                                            #
+#     2. Divide the path into array for "/home/Datasets" as ['home','datasets']         #
+#     3. Traverse into folder by checking whether the subfolder conatins that dic       #
+#     4. If no folder/File is found in the subFolder                                    #
+#            - check whether its a new folder to be created or it folder need to exists #
+#        else                                                                           #
+#           - if found delete the file/folder from the SubFolder                        #
+#########################################################################################
+
 
     def delete_item(self,folderPath):
         path = folderPath.split("/")[1:]
