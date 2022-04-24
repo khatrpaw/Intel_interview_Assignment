@@ -4,7 +4,7 @@ Intel_interview_Assignment - File Structure Application
 
 Goal :<br>
   <p>
-	The goal of the project of the project was to create file structure application where suser will be able to create foler,subFolder,file. <br>
+	The goal of the project of the project was to create file structure application where user will be able to create foler,subFolder,file. <br>
 	It should also provide the funcationality where the user is able to view the root file structure or also with specific folder structure. <br>
 	The user can also filter the view of the folder based on the type of file. the type can be text,image and video. <br> 
 	The user can also travserse the folder and also delete all the items inside the folder. <br>
@@ -12,14 +12,16 @@ Goal :<br>
 
 Gerenal Approach : <br>
 	1. Selection of the datastructure : <br>
-		The datastructure which i have used to solve the problem is a Graph because it would be helpful in keeping the record of the folders adn files anad 
-		also helpful in tranverse from parent Folder to subFolder.<br>
+		The datastructure which i have used to solve the problem is a Graph because it would be helpful in keeping the record of the folders and files and also helpful in tranverse from parent Folder to childFolder.<br>
 		 The  diagram  can be used to explain much better the structure :<br>
      <a>
         https://github.com/khatrpaw/Intel_interview_Assignment/blob/b5f6e042ca95af486103e99476e09268716c031e/file_structure_graph.png
      </a><br><br>
+     
      Folder will be able to keep record of the subFolder and files as childeren < br>
+     
      So we will have a root folder which will be initally empty subFolders .i.e No folder and files  
+     
   2. Different Cmd :<br>
       <p>
       1. Add the folder : add /home <br>
