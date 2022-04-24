@@ -46,9 +46,9 @@ Gerenal Approach : <br>
   <B> view the specific Folder :</B> view /home/datasets <br>
   </p>
   <p>
-  3. Filter the file in the folder : filter /home/datasets -type text <br>
+  3. Filter the file baed on the type parameters in the folder : filter /home/datasets -type text <br>
   
-      This will filter out the file on the type of the file.Such file has a attribute type.It will be used to filter. <br> 
+      This will filter out the file on the type of the file. Every file has a attribute type. It will be used to filter. <br> 
   
   </p><p>
   4. delete the file/folder : delete /home/datasets/info.txt <br>
