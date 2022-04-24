@@ -17,7 +17,7 @@ Gerenal Approach : <br>
 		 The  diagram  can be used to explain much better the structure :<br>
      <a>
         https://github.com/khatrpaw/Intel_interview_Assignment/blob/b5f6e042ca95af486103e99476e09268716c031e/file_structure_graph.png
-     </a>< br><br>
+     </a><br><br>
      Folder will be able to keep record of the subFolder and files as childeren < br>
      So we will have a root folder which will be initally empty subFolders .i.e No folder and files  
   2. Different Cmd :<br>
