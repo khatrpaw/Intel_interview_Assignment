@@ -1,11 +1,12 @@
 from datetime import datetime
 import random
-from File import NewFile
-from Folder import NewFolder
+from NewFile import NewFile
+from NewFolder import NewFolder
 
 
 class FolderStructure() :
     root_dict = NewFolder()
+
     root_dict.name = "root"
     root_dict.subFolder = []
 
@@ -24,7 +25,13 @@ class FolderStructure() :
 #            - check whether its a new folder/file to be created                        #
 #        else                                                                           #
 #           -found append  file/folder in the subFolder                                 #
+#                                                                                       #
+# for example :                                                                         #
+#  root.subFolder[home.subFolder[dataset.subFolder[info.txt,image.subFolder[]]',        #
+#               folder1.subFolder[folder11.subFolder[]]]']                              #
+#  add /home/folder1/folder11                                                           #
 #########################################################################################
+
 
 
 
