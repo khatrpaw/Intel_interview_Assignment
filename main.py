@@ -2,8 +2,8 @@
 from datetime import datetime
 import random
 
-from File import NewFile
-from Folder import NewFolder
+from NewFile import NewFile
+from NewFolder import NewFolder
 from FolderStructure import FolderStructure
 
 
@@ -11,8 +11,8 @@ from FolderStructure import FolderStructure
 def option_menu():
     print("\n--------**- Sample Cmd -**-------------------------------------------------")
     print(" 1. Add Sub Folder -  'add /path/foldername' \n ")
-    print(" 2. Add File -  'add /path/fileName.ext' ext  means (.txt,.png,avi)\n ")
-    print(" 3. Filter By Type -  'filter path -type ext'  ext  means (.txt,.png,avi) \n ")
+    print(" 2. Add File -  'add /path/fileName.ext' ext  means (.txt,.png,.avi)\n ")
+    print(" 3. Filter By Type -  'filter path -type ext'  ext  means (.txt,.png,.avi) \n ")
     print(" 4. Display All Files under Folder -   'view /path/folderName'  \n ") 
     print(" 5. Display all the Folder under Root Folder - 'view'               \n ")
     print(" 6. Exit  - Press q or type exit")
@@ -21,7 +21,7 @@ def option_menu():
 def run():
     folderObj = FolderStructure()
     while 1 :
-    
+        option_menu()
         get_user_input = input(">>  ")
     
         ##To Close the application
@@ -67,7 +67,6 @@ def run():
 
 
 if __name__=="__main__":
-    print(" \n Welcome to Folder Struction Application \n")
+    print(" \n Welcome to File Structure Application \n")
     print("----------------------------------------------------\n")
-    option_menu()
     run()
