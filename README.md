@@ -12,50 +12,87 @@ Goal :<br>
 
 Gerenal Approach : <br>
 	1. Selection of the datastructure : <br>
-		The datastructure which i have used to solve the problem is a tree because it would be helpful in keeping the record of the folders and files and also helpful in traverse from parent Folder to childFolder.<br>
-		 The  diagram  can be used to explain much better the structure :<br>
+		The datastructure which i have used to solve the problem is a tree because in this case the files/folders will be children stored in subFolders which will be helpful in traverse from parent Folder to childFolder.<br>
+		 The diagram has been used to explain much better the structure :<br>
      <a>
         https://github.com/khatrpaw/Intel_interview_Assignment/blob/b5f6e042ca95af486103e99476e09268716c031e/file_structure_graph.png
      </a><br><br>
      
-     Folder will be able to keep record of the subFolder and files as childeren < br>
      
-     So we will have a root folder which will be initally empty subFolders .i.e No folder and files  
+     class NewFolder : 
+    		def __int__(self,name) : 
+        		self.subFolder = []  
+        		self.name = name  
+        		self.upload_time = datetime.now.strftime("%H:%M:%S %B %d, %Y")
+    
+     So the folder will store all the children folders and files in subFolders
+     
+     		class NewFile:
+    			def __int__(self,name,type,size, upload_time= datetime.now()):
+        			self.name = name
+        			self.type = type
+        			self.size = size
+        			self.upload_time = upload_time.strftime("%H:%M:%S %B %d, %Y")
+     
+     
+     Folder will be able to keep record of the subFolder and files as childeren 
+     
+     So we have a root folder which will be initally empty subFolders .i.e No folder and files  
+     
+     So structure of the data is          root.subFolder['home.subFolders['datasets.subFolders['image','annotations']','Folder1.subFolders[]']','sys.subFolders[]']
+     this structure of the data means :
+     				     root  
+     					- datasets 
+						--image 
+						--Folder1
+					- sys
      
   2. Different Cmd :<br>
       <p>
-      1. Add the folder : add /home <br>
-               This will add home as a folder in root.subFolder array. <br>
-               I am also trying to check whether if the path is correct or not by checking the if the subFolder of root contains the folders <br>
-               for eg:  if give input is add /datasets/image <br>
+      1. Add the folder : add /home <br><br>
+         
+	This will add home as a folder in root.subFolder array. <br>
+        I am also trying to check whether if the path is correct or not by checking the if the subFolder of root contains the folders <br>
+        
+	for eg:  if give input is add /datasets/image <br>
                it will give print "No folder namd 'datasets' is found" becuase root has no subFolder as datasets. So we need to create the first the folder datasets and then folder image <br>
 	
-        add /home <br>
-        add /home/datasets <br>
-        add /sys <br>
-        add /home/datasets/annotations <br>
-	
-	add/home/add/home/info.txt <br>
-	.... <br>
+        	add /home 
+        	add /home/datasets 
+        	add /sys 
+        	add /home/datasets/annotations 
+		add/home/add/home/info.txt 
+		.... 
   </p>  
   <p>
+	
   2.View the root folder :  <B>view </B>
+        
         It will show all the subFolders of the root <br>
-        In this case : <br>
-          -home  <br>
-          -sys  <br>
-          -usr  <br>
-          -text.txt <br>
+        	In this case : <br>
+          		-home  <br>
+          		-sys  <br>
+          		-usr  <br>
+          		-text.txt <br>
+	
   <B> view the specific Folder :</B> view /home/datasets <br>
-  </p>
-  <p>
+  
+ </p>
+ 
+ <p>
   3. Filter the file baed on the type parameters in the folder : filter /home/datasets -type text <br>
   
       This will filter out the file on the type of the file. Every file has a attribute type. It will be used to filter. <br> 
   
-  </p><p>
-  4. delete the file/folder : delete /home/datasets/info.txt <br>
-      this will be delete the file/folder .<br>
+  </p> 
+  <p>
+  4. delete the file/folder : 
+		delete /path/filename <br>
+		delete /path/folderName <br>
+		
+		delete /home/datasets/info.txt 
+      		this will be delete the info.txt inside the dataset folder
+	
   
   </p>
   
