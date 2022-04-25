@@ -22,7 +22,7 @@ def run():
     folderObj = FolderStructure()
     while 1 :
         option_menu()
-        get_user_input = input(">>  ")
+        get_user_input = input("\n >>  ")
     
         ##To Close the application
     
