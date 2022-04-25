@@ -29,6 +29,7 @@ Gerenal Approach : <br>
                I am also trying to check whether if the path is correct or not by checking the if the subFolder of root contains the folders <br>
                for eg:  if give input is add /datasets/image <br>
                it will give print "No folder namd 'datasets' is found" becuase root has no subFolder as ss. So we need to create the first the folder datasets and then folder image <br>
+	
         add /home <br>
         add /home/datasets <br>
         add /sys <br>
@@ -57,12 +58,13 @@ Gerenal Approach : <br>
   </p>
   
   
-  How to run the program
+How to run the program
   
     python main.py
     
-    If you want to run the test case :
-      python unitTest.py
+ If you want to run the test case :
+      
+    python unitTest.py
     
     
     
