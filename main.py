@@ -9,7 +9,7 @@ from FolderStructure import FolderStructure
 
 
 def option_menu():
-    print("\n--------**- Sample Cmd -**-------------------------------------------------")
+    print("\n--------**- Format of the Cmd -**-------------------------------------------------")
     print(" 1. Add Sub Folder -  'add /path/foldername' \n ")
     print(" 2. Add File -  'add /path/fileName.ext' ext  means (.txt,.png,.avi)\n ")
     print(" 3. Filter By Type -  'filter /path/folderName -type ext'  ext  means (.text,.image,.video) \n ")
