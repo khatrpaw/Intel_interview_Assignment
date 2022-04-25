@@ -12,7 +12,7 @@ def option_menu():
     print("\n--------**- Sample Cmd -**-------------------------------------------------")
     print(" 1. Add Sub Folder -  'add /path/foldername' \n ")
     print(" 2. Add File -  'add /path/fileName.ext' ext  means (.txt,.png,.avi)\n ")
-    print(" 3. Filter By Type -  'filter path -type ext'  ext  means (.txt,.png,.avi) \n ")
+    print(" 3. Filter By Type -  'filter /path/folderName -type ext'  ext  means (.txt,.png,.avi) \n ")
     print(" 4. Display All Files under Folder -   'view /path/folderName'  \n ") 
     print(" 5. Display all the Folder under Root Folder - 'view'               \n ")
     print(" 6. Exit  - Press q or type exit")
