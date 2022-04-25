@@ -15,7 +15,7 @@ Gerenal Approach : <br>
 		The datastructure which i have used to solve the problem is a tree because in this case the files/folders will be children stored in subFolders which will be helpful in traverse from parent Folder to childFolder.<br>
 		 The diagram has been used to explain much better the structure :<br>
      <a>
-        https://github.com/khatrpaw/Intel_interview_Assignment/blob/b5f6e042ca95af486103e99476e09268716c031e/file_structure_graph.png
+        https://github.com/khatrpaw/Intel_interview_Assignment/blob/c414f11d81ffb4457aa3f5e8eeb7724d11f53fb6/file_structure_tree.png
      </a><br><br>
      
      
