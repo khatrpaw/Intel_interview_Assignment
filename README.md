@@ -12,7 +12,7 @@ Goal :<br>
 
 Gerenal Approach : <br>
 	1. Selection of the datastructure : <br>
-		The datastructure which i have used to solve the problem is a Graph because it would be helpful in keeping the record of the folders and files and also helpful in traverse from parent Folder to childFolder.<br>
+		The datastructure which i have used to solve the problem is a tree because it would be helpful in keeping the record of the folders and files and also helpful in traverse from parent Folder to childFolder.<br>
 		 The  diagram  can be used to explain much better the structure :<br>
      <a>
         https://github.com/khatrpaw/Intel_interview_Assignment/blob/b5f6e042ca95af486103e99476e09268716c031e/file_structure_graph.png
@@ -28,13 +28,15 @@ Gerenal Approach : <br>
                This will add home as a folder in root.subFolder array. <br>
                I am also trying to check whether if the path is correct or not by checking the if the subFolder of root contains the folders <br>
                for eg:  if give input is add /datasets/image <br>
-               it will give print "No folder namd 'datasets' is found" becuase root has no subFolder as ss. So we need to create the first the folder datasets and then folder image <br>
+               it will give print "No folder namd 'datasets' is found" becuase root has no subFolder as datasets. So we need to create the first the folder datasets and then folder image <br>
 	
         add /home <br>
         add /home/datasets <br>
         add /sys <br>
         add /home/datasets/annotations <br>
-        .... <br>
+	
+	add/home/add/home/info.txt <br>
+	.... <br>
   </p>  
   <p>
   2.View the root folder :  <B>view </B>
