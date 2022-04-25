@@ -12,7 +12,7 @@ Goal :<br>
 
 Gerenal Approach : <br>
 	1. Selection of the datastructure : <br>
-		The datastructure which i have used to solve the problem is a Graph because it would be helpful in keeping the record of the folders and files and also helpful in tranverse from parent Folder to childFolder.<br>
+		The datastructure which i have used to solve the problem is a Graph because it would be helpful in keeping the record of the folders and files and also helpful in traverse from parent Folder to childFolder.<br>
 		 The  diagram  can be used to explain much better the structure :<br>
      <a>
         https://github.com/khatrpaw/Intel_interview_Assignment/blob/b5f6e042ca95af486103e99476e09268716c031e/file_structure_graph.png
